@@ -1,4 +1,4 @@
-# VideoForge
+# VideoForge!
 
 VideoForge is a microservice-based video streaming platform.  
 This repository contains the backend services and the frontend UI.
