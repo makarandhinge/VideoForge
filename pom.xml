@@ -9,7 +9,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>4.0.0</version>
+        <version>3.3.5</version>
         <relativePath/>
     </parent>
 
@@ -29,9 +29,8 @@
 
     <properties>
         <java.version>17</java.version>
-        <spring-cloud.version>2025.1.0</spring-cloud.version>
+        <spring-cloud.version>2023.0.3</spring-cloud.version>
     </properties>
-
 
     <dependencyManagement>
         <dependencies>
@@ -42,11 +41,9 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
-
-
         </dependencies>
     </dependencyManagement>
+
 
 
     <build>

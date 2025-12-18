@@ -9,3 +9,10 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+
+server:
+  port: 8081
+
+logging:
+  level:
+    org.springframework.security: DEBUG
