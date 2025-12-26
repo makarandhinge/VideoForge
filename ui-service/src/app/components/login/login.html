@@ -1,0 +1,49 @@
+
+<div class="container ">
+        <div class="form-container">
+
+        <div class="from-header">
+            
+            <h2>Welcome Back !</h2>
+            <p>Please login to your account to continue.</p>
+        </div>
+        <p>{{credentials.error}}</p>
+        <form (ngSubmit)="onSubmit()" class="from-box">
+            <div class="input-group">
+                <label for="email" class="floating-label" >Email</label>
+                <input type="email" name="email" id="email" class="input-field" placeholder="required" [(ngModel)]="credentials.email" required>
+                
+            </div>
+                
+            <div class="input-group">
+                <label for="password" class="floating-label" >Password</label>
+                <input type="password" name="password" id="password" class="input-field" placeholder="required" [(ngModel)]="credentials.password" required >
+                
+                
+            </div>
+            <div class="input-group checkbox-group">
+                <div class="form-col remember-me">
+                    <input type="checkbox" id="remember-me-checkbox" class="checkbox-field">
+                    <label for="remember-me-checkbox">Remember me</label>
+                </div>
+                <div class="form-col">
+                    <a href="#" class="form-link">Forgot password?</a>
+                </div>
+                
+            </div>
+            <button type="submit"  class="form-btn form-btn--submit">Sign In</button>
+            
+        </form>
+         <div class="form-divider">
+            <p>Or</p>
+        </div>
+        <div class="form-bottom">
+            <p>Create an account? </p>
+            <a routerLink="/register"   class="under-link">Register</a>
+            
+
+        </div>
+    </div>
+
+</div>
+
