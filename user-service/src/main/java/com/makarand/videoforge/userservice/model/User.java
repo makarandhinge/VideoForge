@@ -14,6 +14,8 @@ public class User {
     @GeneratedValue
     private UUID id;
 
+    private String Name;
+
     @Column(unique = true, nullable = false)
     private String email;
 

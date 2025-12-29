@@ -3,3 +3,17 @@ server:
 spring:
   application:
     name: video-service
+  datasource:
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/video-service
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  servlet:
+    multipart:
+      max-file-size: 2GB
+      max-request-size: 2GB
+jwt:
+  secret: ${JWT_SECRET}

@@ -28,6 +28,8 @@ public class UserService {
         }
 
          User user = new User();
+         String fullName = request.getFirstName() + " " + request.getLastName();
+         user.setName(fullName);
          user.setEmail(request.getEmail());
          user.setPassword(passwordEncoder.encode(request.getPassword()));
 
