@@ -12,6 +12,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.List;
 
 @Slf4j
 @RestController
@@ -29,6 +30,12 @@ public class VideoController {
        Video savedVideo = videoService.uploadVideo(file, title, description);
        log.info("saved Video - " + savedVideo);
        return ResponseEntity.ok("success");
+    }
+
+    @GetMapping("/videoList")
+    public ResponseEntity<List<String>> videoList(){
+        List<String> list = videoService.getVideoList();
+        return ResponseEntity.ok().body(list);
     }
 
 }

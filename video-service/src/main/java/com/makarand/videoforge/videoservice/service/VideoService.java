@@ -16,6 +16,8 @@ import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class VideoService {
@@ -45,5 +47,10 @@ public class VideoService {
             Files.copy(in,target, StandardCopyOption.REPLACE_EXISTING);
         }
         return savedVideo;
+    }
+
+    public List<String> getVideoList() {
+        List<Video> listOfVideos = videoRepository.findAll();
+        return listOfVideos.stream().map(v -> v.getTitle()).collect(Collectors.toList());
     }
 }
